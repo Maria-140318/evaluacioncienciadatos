@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ciencias Basicas</title>
+</head>
+<body>
+    <h1>Industrial</h1>
+    <h2><a style="color: rgb(5, 30, 255);" href="/index">⌂Inicio</a></h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        {{ formd.as_p }}
+        <button type="submit">Consultar</button>
+         
+    </form>
+    <div style="overflow:scroll;height:700px;width:900px;display: flex; margin: 0 auto; ">
+            
+        {% if chart %}
+       <img src="data:image/png;base64,{{chart}}"> 
+       {% endif %}
+   
+   </div>
+    <footer id="footer" style=" bottom: 0;width: 100%;text-align: center;">
+            <p style="color: rgb(13, 6, 75);">Avenida Tecnológico #100, Ciudad Guzmán</p>
+            <p style="color:rgb(13, 6, 75);">Municipio de Zapotlan el Grande, Jalisco</p>
+            <p style="color:rgb(13, 6, 75);">Teléfono:(01) 341 575 2050</p>
+            <p style="color: rgb(13, 6, 75);">Fax: 01(341) 575 2074</p>
+    </footer>
+</body>
+</html>

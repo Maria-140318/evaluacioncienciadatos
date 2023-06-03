@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consultar Usuario</title>
+</head>
+<body>
+    <h2><a style="color: rgb(13, 6, 75);" href="/index">⌂Inicio</a></h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                
+                <td>Usuario</td>
+                <td>Nombre</td>
+                <td>Email</td>
+          
+            </tr>
+        </thead>
+        <tbody style="color: rgb(13, 6, 75);">
+            {% if object_list %}
+            {% for User in object_list %} 
+            <tr>             
+                <td style="width: 25%; text-align: left;vertical-align: top;border: 1px solid #000;">{{User.username}}</td>
+                <td style="width: 25%; text-align: left;vertical-align: top;border: 1px solid #000;">{{User.first_name}}</td>
+                <td style="width: 25%; text-align: left;vertical-align: top;border: 1px solid #000;">{{user.email}}</td>
+                
+                
+            </tr>
+            {% endfor %}
+
+            {% else %}
+            <h1>No hay registros</h1>
+
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>

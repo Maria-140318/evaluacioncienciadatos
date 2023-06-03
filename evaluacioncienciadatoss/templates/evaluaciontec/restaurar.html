@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Respaldo</title>
+</head>
+<body>
+
+{% block content %}
+    <h1>Respaldo sql</h1>
+    <h2><a style="color: rgb(5, 30, 255);" href="/index">⌂Inicio</a></h2>
+    {% if error %}
+        <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endif %}
+    {% if success %}
+        <div class="alert alert-success" role="alert">El respaldo del archivo es satisfactorio</div>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="backup_file" class="form-label">Respaldar</label>
+            <input type="file" class="form-control" id="backup_file" name="backup_file">
+        </div>
+        <button type="submit" class="btn btn-primary">Respaldar</button>
+    </form>
+{% endblock %}
+</body>
+</html>

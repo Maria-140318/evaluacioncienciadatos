@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subir</title>
+</head>
+<body> 
+    <h2><a style="color: rgb(5, 30, 255);" href="/index">⌂Inicio</a></h2>
+        {% if messages %}
+            {% for message in messages %}
+            <div>
+            <strong>{{messages|safe}}</strong>
+            </div>
+            {%endfor%}
+        {% else %}
+            {{order }}
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token%}
+                <p>Solo se acepta csv </p>
+                <label>Subir archivo</label>
+                <input type="file" name="file">
+                <br>
+                <button type="submit">Subir</button> 
+            </form>
+        {% endif %}
+</body>
+</html>
+

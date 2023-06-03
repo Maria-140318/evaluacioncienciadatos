@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+        }
+
+        li a {
+            display: block;
+            color: rgb(13, 6, 75);;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color:red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(13, 6, 75);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px  rgb(13, 6, 75);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+             background-color: rgb(13, 6, 75);
+        }
+        .dropdown:hover .dropdown-content {            
+            display: block;           
+        }
+        #page-container {
+            position: relative;
+            min-height: 170px;
+        }
+        
+        #content-wrap {
+            padding-bottom: 1cm;
+            /* altura de pie de página */
+        }
+    </style>
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <img src="/static/css/img/encabeza.png" 
+        style="background-repeat: no-repeat;height: 150px;width: 100%; background-size: cover;margin-bottom: 10px;"/>
+    </header>
+    <div id="page-container">
+        <div id="content-wrap">
+            <ul >
+                <li class="dropdown"><a>▼ Departamentos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="añadir_departamento">Añadir</a></li>
+                        <li><a href="consultar_departamento">Consultar</a></li>
+                        <li><a href="departamento_download">Exportar</a></li>
+                        <li><a href="upload">Importar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a>▼ Carreras</a>
+                    <ul class="dropdown-content">
+                        <li><a href="añadir_carrera">Añadir </a></li>
+                        <li><a href="consultar_carrera">Consultar</a></li>
+                        <li><a href="carrera_download">Exportar</a></li>
+                        <li><a href="upload">Importar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a>▼ Maestros</a>
+                    <ul class="dropdown-content">
+                        <li><a href="añadir_maestro">Añadir </a></li>
+                        <li><a href="consultar_maestro">Consultar</a></li>
+                        <li><a href="maestro_download">Exportar</a></li>
+                        <li><a href="upload">Importar</a></li>
+                    </ul> 
+                </li>          
+                <li class="dropdown"><a>▼ Estadisticas Departamento</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ciencias_tierra">Ciencias de la tierra </a></li>
+                        <li><a href="economia_administracion">Economía y Administracion</a></li>
+                        <li><a href="sistemas_computacion">Sistemas y Computacion</a></li>
+                        <li><a href="electrica_electronica">Electrica y Electronica</a></li>
+                        <li><a href="mecanica">Mecanica</a></li>
+                        <li><a href="industrial">Industrial</a></li>
+                        <li><a href="ciencias_basicas">Ciencias Basicas</a></li>
+                        <li><a href="idiomas">Idiomas</a></li>                            
+                        <li><a href="estadisticas_download">Exportar</a></li>
+                        <li><a href="upload">Importar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a>▼ Estadisticas Maestros</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cienciasytierra">Ciencias de la tierra </a></li>
+                        <li><a href="economiayadministracion">Economía y Administracion</a></li>
+                        <li><a href="sistemasycomputacion">Sistemas y Computacion</a></li>
+                        <li><a href="electricayelectronica">Electrica y Electronica</a></li>
+                        <li><a href="mecanicaD">Mecania</a></li>
+                        <li><a href="industrialD">Industrial</a></li>
+                        <li><a href="ciencia_basica">Ciencias Basicas</a></li>
+                        <li><a href="idioma">Idiomas</a></li>
+                       
+                    </ul>
+                </li>
+                
+                <li> <a href="respaldo" >Respaldo</a> </li>
+                <li>
+                  <a href="{% url 'logout' %}">Salir</a> 
+                </li>                       
+                
+            </ul>
+       
+        </div> 
+    </div>
+    <br><br><br><br><br><br>
+      <footer id="footer" style=" bottom: 0;width: 100%; text-align: center;"> 
+        <p style="color: rgb(13, 6, 75);">Avenida Tecnológico #100, Ciudad Guzmán</p>
+        <p style="color:rgb(13, 6, 75);">Municipio de Zapotlan el Grande, Jalisco</p>
+        <p style="color:rgb(13, 6, 75);">Teléfono:(01) 341 575 2050</p>
+        <p style="color: rgb(13, 6, 75);">Fax: 01(341) 575 2074</p>
+    </footer>
+</body>
+</html>

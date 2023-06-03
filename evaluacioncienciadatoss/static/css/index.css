@@ -1,0 +1,79 @@
+body {
+    /*background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(211, 240, 240));*/
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*Siempre es necesario cuando trabajamos con alturas*/
+}
+
+
+/*#encabezado {
+    background-image: url('.../static/css/img/encabeza.png');
+    background-repeat: no-repeat;
+    height: 127px;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 10px;
+}*/
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav>li {
+    float: left;
+}
+
+.nav li a {
+    background-color: rgb(13, 6, 75);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 15px;
+    display: block;
+    border: 2px solid rgb(13, 6, 75);
+    height: 30px;
+    width: 175px;
+}
+
+.nav li a:hover {
+    background-color: rgb(13, 6, 75);
+    position: absolute;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+}
+
+nav li:hover>ul {
+    display: block;
+}
+
+.nav li ul li {
+    position: relative;
+}
+
+.nav li ul li ul {
+    right: -200px;
+    top: 0px;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* altura de pie de página */
+}
+
+#footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* altura de pie de página */
+}

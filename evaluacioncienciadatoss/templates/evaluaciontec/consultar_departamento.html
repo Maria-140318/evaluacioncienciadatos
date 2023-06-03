@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consultar Departamento</title>
+</head>
+<body>
+    <h2><a style="color: rgb(5, 30, 255);" href="/index">⌂Inicio</a></h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Identificador</td>
+                <td>Nobre</td>
+                
+            </tr>
+        </thead>
+        <tbody>            
+            {% if object_list %}{% for departamentos in object_list %}
+                <tr>
+                    <td style="width: 25%; text-align: left;vertical-align: top;border: 1px solid #000;">{{departamentos.idDepartamento}}</td>
+                    <td style="width: 25%; text-align: left;vertical-align: top;border: 1px solid #000;">{{departamentos.nombre}}</td>                    
+                    <td>
+                        <a class="btn btn-primary" style="background-color: #4CAF50;border: none;color: white; padding: 15px 32px;text-align: center;text-decoration: none;
+                        display: inline-block;font-size: 16px;" href="{% url 'modi_departamento' departamentos.idDepartamento %}">Editar</a>
+                       
+                    </td>                    
+                </tr>               
+                {% endfor %}{% else %}
+                <h1>No hay registros</h1>    
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>
